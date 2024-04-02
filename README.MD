@@ -1,3 +1,4 @@
-# Lantern // Discord Bot
+# Discord Bot // Lantern
+
 > [!CAUTION]
-> blah blah don't use this becuz unless told, this is EXPERIMENTAL code and issues can arise
+> blah blah don't use this unless told becuz this is EXPERIMENTAL code and issues can arise
