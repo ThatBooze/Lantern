@@ -1,0 +1,16 @@
+{
+    "embed": [
+        {
+            "colour": "0x2B2D31",
+            "name": "What Are Apples?",
+            "value": "```ini\nApples are a [fruit].\n```"
+        }
+    ],
+
+    "message": [
+        {
+            "message": "What Are Apples?\n Apples are a §afruit§r.",
+            "delete_after": 0
+        }
+    ]
+}

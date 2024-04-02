@@ -2,10 +2,10 @@
 import discord, random, json
 from discord.ext import bridge, commands
 
-with open('Lantern/Resources/configuration.json') as file:
+with open("Lantern/Resources/configuration.json") as file:
     data = json.load(file)
 
-with open('Lantern/Resources/splashes.txt', 'r', encoding='utf-8') as s:
+with open("Lantern/Resources/splashes.txt", "r", encoding="utf-8") as s:
     SPLASH = random.choice(s.readlines()).strip()
 
 bot = bridge.Bot(command_prefix="", intents=discord.Intents.all()) #-NOTE: command_prefix is blank on purpose !!
@@ -13,13 +13,13 @@ bot = bridge.Bot(command_prefix="", intents=discord.Intents.all()) #-NOTE: comma
 
 
 cogs_list = [
-    'about'
+    "faq"
     #-! Add more here
 ]
 
 for cog in cogs_list:
-    bot.load_extension(f'Cogs.{cog}')
-    print(f'Loaded Cogs.\033[92m{cog}\033[0m')
+    bot.load_extension(f"Cogs.{cog}")
+    print(f"Loaded Cogs.\033[92m{cog}\033[0m")
 
 
 

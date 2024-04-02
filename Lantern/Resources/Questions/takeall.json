@@ -1,0 +1,16 @@
+{
+    "embed": [
+        {
+            "colour": "0x2B2D31",
+            "name": "How to take all [in-game]",
+            "value": "```ini\nTo [take-all] in-game, you simply DON'T\n```"
+        }
+    ],
+
+    "message": [
+        {
+            "message": "How to NOT take all:\n Vanilla - §aDouble-click in your inventory§r\n LEM Client Helper - §aMiddle §aClick§r",
+            "delete_after": 0
+        }
+    ]
+}
