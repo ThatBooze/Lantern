@@ -1,4 +1,6 @@
 Lantern/Resources/configuration.json
+.idea
 Lantern/Cogs/__pycache__
+Lantern/Cogs/terrible.py
 Lantern/Resources/Questions/*.json
 !Lantern/Resources/Questions/apples.json.example
