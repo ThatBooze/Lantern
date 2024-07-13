@@ -1,5 +1,6 @@
-Lantern/Resources/configuration.json
 .idea
+Lantern.code-workspace
+Lantern/Resources/configuration.json
 Lantern/Cogs/__pycache__
 Lantern/Cogs/terrible.py
 Lantern/Resources/Questions/*.json

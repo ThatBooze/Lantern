@@ -1,6 +1,7 @@
-#run.py
-import discord, random, json
-from discord.ext import bridge, commands
+import json
+import random
+import discord
+from discord.ext import bridge
 
 with open("Lantern/Resources/configuration.json") as file:
     data = json.load(file)
@@ -8,13 +9,11 @@ with open("Lantern/Resources/configuration.json") as file:
 with open("Lantern/Resources/splashes.txt", "r", encoding="utf-8") as s:
     SPLASH = random.choice(s.readlines()).strip()
 
-bot = bridge.Bot(command_prefix="", intents=discord.Intents.all()) #-NOTE: command_prefix is blank on purpose !!
-
-
+bot = bridge.Bot(command_prefix="", intents=discord.Intents.all())
 
 cogs_list = [
-    "faq"
-    #-! Add more here
+    "pterodactyl",
+    "tags"
 ]
 
 for cog in cogs_list:
@@ -22,14 +21,14 @@ for cog in cogs_list:
     print(f"Loaded Cogs.\033[92m{cog}\033[0m")
 
 
-
-#-? Shushes discord.ext.commands.errors.CommandNotFound
+# Shushes discord.ext.commands.errors.CommandNotFound
 @bot.event
 async def on_message(message):
     if message.author.bot or message.webhook_id:
         await bot.process_commands(message)
     else:
         pass
+
 
 @bot.event
 async def on_ready():
