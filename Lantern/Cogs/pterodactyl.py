@@ -16,7 +16,7 @@ class PTERODACTYL(commands.Cog):
 
     @minecraft.command(description="")
     @commands.has_permissions(ban_members=True)
-    async def warn(self, ctx, player: str, reasoning: str):
+    async def warn(self, ctx, player: str, reasoning: str = None):
 
         embed = discord.Embed(
             description="Applying changes…\nThis shouldn't take long.",
