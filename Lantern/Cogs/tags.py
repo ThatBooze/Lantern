@@ -10,12 +10,11 @@ def generate_list():
 class TAGS(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.my_list = generate_list()
 
         @discord.slash_command(description="testing")
         async def tag(
                 ctx: discord.ApplicationContext,
-                selection: discord.Option(str, "", choices=self.my_list, required=True),
+                selection: discord.Option(str, "", choices=generate_list(), required=True),
                 target: discord.Member = None):
 
             if target is None:

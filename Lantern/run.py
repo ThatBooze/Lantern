@@ -35,4 +35,5 @@ async def on_ready():
     await bot.change_presence(status=discord.Status.idle, activity=discord.Game(SPLASH))
     print(f"\033[93m{SPLASH}\033[0m | {bot.user} is online!")
 
+
 bot.run(data["TOKEN"])
