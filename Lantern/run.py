@@ -13,12 +13,15 @@ bot = bridge.Bot(command_prefix="", intents=discord.Intents.all())
 
 cogs_list = [
     "pterodactyl",
-    "tags"
+    "tags",
 ]
 
 for cog in cogs_list:
-    bot.load_extension(f"Cogs.{cog}")
-    print(f"Loaded Cogs.\033[92m{cog}\033[0m")
+    try:
+        bot.load_extension(f"Cogs.{cog}")
+        print(f"Loaded Cogs.\033[92m{cog}\033[0m")
+    except Exception as e:
+        print(f"Failed to load Cogs.\033[91m{cog}\033[0m: {e}")
 
 
 # Shushes discord.ext.commands.errors.CommandNotFound
