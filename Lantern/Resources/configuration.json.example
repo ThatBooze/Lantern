@@ -1,0 +1,15 @@
+{
+    "TOKEN": "<DISCORD_TOKEN",
+    "PREFIX": "<COMMAND_PREFIX>",
+
+    "PTERO_URL": "debug",
+    "PTERO_KEY": "anything",
+
+    "SERVER_IDS": {
+        "menuServer": 1,
+        "mainServer": 2,
+        "altServer": 3,
+        "expServer": 4,
+        "deServer": 5
+    }
+}

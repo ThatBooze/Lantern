@@ -3,6 +3,7 @@ import random
 import discord
 from discord.ext import bridge
 
+
 with open("Lantern/Resources/configuration.json") as file:
     data = json.load(file)
 
@@ -13,7 +14,7 @@ bot = bridge.Bot(command_prefix="", intents=discord.Intents.all())
 
 cogs_list = [
     "pterodactyl",
-    "tags",
+    "tags"
 ]
 
 for cog in cogs_list:
@@ -24,7 +25,6 @@ for cog in cogs_list:
         print(f"Failed to load Cogs.\033[91m{cog}\033[0m: {e}")
 
 
-# Shushes discord.ext.commands.errors.CommandNotFound
 @bot.event
 async def on_message(message):
     if message.author.bot or message.webhook_id:

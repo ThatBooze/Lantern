@@ -19,12 +19,30 @@ class PTERODACTYL(commands.Cog):
     async def warn(self, ctx, player: str, reasoning: str = None):
 
         embed = discord.Embed(
+            type="rich",  # https://youtu.be/801VAIvdP6I
             description="Applying changes…\nThis shouldn't take long.",
             color=discord.Color.embed_background()
         )
         embed.set_thumbnail(url="https://booze.d3rpp.dev/xof.gif")
 
         await ctx.reply(embed=embed, ephemeral=True)
+
+        try:
+            self.pydapi.client.servers.send_console_command(
+                data.get('SERVER_IDS')["menuServer"],
+                f"tempwarn {player} 7d {reasoning}"
+            )
+
+            embed = discord.Embed(
+                description="Changes Applied!",
+                color=discord.Color.brand_green()
+            )
+            embed.set_thumbnail(url=f"https://starlightskins.lunareclipse.studio/render/default/{player}/bust")
+
+            await ctx.edit(embed=embed)
+
+        except Exception as e:
+            await ctx.edit(content=e, embed=None)
 
 
 def setup(bot):
