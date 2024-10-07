@@ -13,7 +13,7 @@ with open("Lantern/Resources/splashes.txt", "r", encoding="utf-8") as s:
 bot = bridge.Bot(command_prefix="", intents=discord.Intents.all())
 
 cogs_list = [
-    "p2",
+    "pterodactyl",
     "tags"
 ]
 
@@ -36,7 +36,7 @@ async def on_message(message):
 @bot.event
 async def on_ready():
     await bot.change_presence(status=discord.Status.idle, activity=discord.Game(SPLASH))
-    print(f"\033[93m{SPLASH}\033[0m | {bot.user} is online!")
+    print(f"\033[93m{SPLASH}\033[0m | {bot.user.name} is online!")
 
 
 bot.run(data["TOKEN"])
