@@ -1,5 +1,5 @@
 {
-    "TOKEN": "<DISCORD_TOKEN",
+    "TOKEN": "<DISCORD_TOKEN>",
     "PREFIX": "<COMMAND_PREFIX>",
 
     "PTERO_URL": "debug",

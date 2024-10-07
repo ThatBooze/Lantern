@@ -2,6 +2,3 @@
 Lantern.code-workspace
 Lantern/Resources/configuration.json
 Lantern/Cogs/__pycache__
-Lantern/Cogs/terrible.py
-Lantern/Resources/Questions/*.json
-!Lantern/Resources/Questions/apples.json.example

@@ -13,7 +13,7 @@ with open("Lantern/Resources/splashes.txt", "r", encoding="utf-8") as s:
 bot = bridge.Bot(command_prefix="", intents=discord.Intents.all())
 
 cogs_list = [
-    "pterodactyl",
+    "p2",
     "tags"
 ]
 
