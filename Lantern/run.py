@@ -14,7 +14,7 @@ bot = bridge.Bot(command_prefix="", intents=discord.Intents.all())
 
 cogs_list = [
     "pterodactyl",
-    "tags"
+    "real"
 ]
 
 for cog in cogs_list:

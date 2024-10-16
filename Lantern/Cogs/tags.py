@@ -3,6 +3,8 @@ from discord.ext import commands
 import os
 
 
+# TODO: Rewrite everything.
+
 class Tags(commands.Cog):
     def __init__(self, bot):
         self.bot = bot

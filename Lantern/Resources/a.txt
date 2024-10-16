@@ -1,5 +1,0 @@
-[12:20:08] [main/INFO]: Loaded configuration file for ModernFix 5.19.3+mc1.21.1: 54 options available, 4 override(s) found
-[12:20:08] [main/WARN]: Option 'mixin.bugfix.paper_chunk_patches' overriden (by mods [c2me]) to 'false'
-[12:20:09] [main/WARN]: Error loading class: me/jellysquid/mods/sodium/client/gui/SodiumGameOptionPages (java.lang.ClassNotFoundException: me/jellysquid/mods/sodium/client/gui/SodiumGameOptionPages)
-[12:20:09] [main/WARN]: Error loading class: net/caffeinemc/sodium/config/user/UserConfigCategories (java.lang.ClassNotFoundException: net/caffeinemc/sodium/config/user/UserConfigCategories)
-[12:20:09] [main/WARN]: Error loading class: ca/spottedleaf/starlight/common/thread/SchedulingUtil (java.lang.ClassNotFoundException: ca/spottedleaf/starlight/common/thread/SchedulingUtil)
