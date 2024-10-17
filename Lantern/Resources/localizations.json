@@ -1,0 +1,12 @@
+{
+    "en": {
+        "performing_action": "Performing action…\nThis will be done shortly.",
+        "ban_description": "Ban a player from the server",
+        "ban_response": "{server} | {command}"
+    },
+    "es": {
+        "performing_action": "Realizando acción…\nEsto se hará en breve.",
+        "ban_description": "Prohibir a un jugador del servidor",
+        "ban_response": "{server} | {command}"
+    }
+}

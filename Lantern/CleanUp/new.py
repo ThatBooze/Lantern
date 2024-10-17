@@ -45,16 +45,22 @@ async def process_command(ctx, command):
 class PTERODACTYL(commands.Cog):
     def __init__(self, bot):
         self.pypapi = PterodactylClient(data.get('PTERO_URL'), data.get('PTERO_KEY'))
+        self.servers = data.get('SERVER_IDS')
         self.bot = bot
 
     minecraft = discord.SlashCommandGroup("minecraft")
 
-    @minecraft.command(description="")
-    @commands.has_permissions(ban_members=True)  # Note: This is unsecure!! Add a list of allowed guilds and roles
-    async def warn(self, ctx, player: str, reasoning: str = None):
+    @minecraft.command(description="(Select All: *) • (Exempt: !<server>)")
+    @commands.has_permissions(ban_members=True)  # WARNING: This is unsecure!! Add a list of allowed guilds and roles
+    async def warn(self, ctx, player: str, reasoning: str = None, server: str = "Menu"):
+        # TODO: Add a way to select servers (using ! to exempt an server and * for all servers. ie. !main)
         await process_command(ctx, f"warn {player} {reasoning}")
 
     # TODO: Add personatus
+    @minecraft.command(description="")
+    @commands.has_permissions(ban_members=True)
+    async def personatus(self, ctx, player: str):
+        await process_command(ctx, f"personatus {player}")
 
 
 def setup(bot):
