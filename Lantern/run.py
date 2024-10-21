@@ -1,7 +1,7 @@
 import json
 import random
 import discord
-from discord.ext import bridge
+from discord.ext import commands
 
 
 with open("Lantern/Resources/configuration.json") as file:
@@ -10,11 +10,11 @@ with open("Lantern/Resources/configuration.json") as file:
 with open("Lantern/Resources/splashes.txt", "r", encoding="utf-8") as s:
     SPLASH = random.choice(s.readlines()).strip()
 
-bot = bridge.Bot(command_prefix="", intents=discord.Intents.all())
+bot = commands.Bot(command_prefix="", intents=discord.Intents.all())
 
 cogs_list = [
-    # "pterodactyl",
-    "rewrite"
+    "random",
+    "tags"
 ]
 
 for cog in cogs_list:
