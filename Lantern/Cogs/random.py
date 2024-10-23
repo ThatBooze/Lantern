@@ -43,7 +43,7 @@ class RANDOM(commands.Cog):  # TODO: /chatdisabler enablechat <true/false>
 
     @minecraft.command()
     async def personatus(self, ctx: discord.ApplicationContext,
-                         options: discord.Option(str, choices=["foo", "bar", "spoof"]),
+                         options: discord.Option(str, choices=["1", "2", "3"]),
                          player: discord.Option(str, required=True),
                          spoofed: discord.Option(str, required=False)):
         await process_command(ctx, "menuServer", f"personatus {options} {player} {spoofed}")
